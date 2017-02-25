@@ -1,0 +1,25 @@
+{
+  "name": "stocktaking",
+  "version": "0.0.1",
+  "description": "Inventory your stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DawidBartosz/stocktaking.git"
+  },
+  "keywords": [
+    "inventory",
+    "stocktaking",
+    "stuff",
+    "managing"
+  ],
+  "author": "Dawid Janiga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DawidBartosz/stocktaking/issues"
+  },
+  "homepage": "https://github.com/DawidBartosz/stocktaking#readme"
+}
