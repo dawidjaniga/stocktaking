@@ -1,0 +1,53 @@
+extends ../node_modules/jade-bootstrap/_bootstrap
+append styles
+	// Custom styles for this template
+	link(href='../css/dashboard.css', rel='stylesheet')
+	link(href='../css/app.css', rel='stylesheet')
+append scripts
+	script(src='../js/jquery.loadTemplate.min.js')
+	script(src='../js/getThings.js')
+block body
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		.container-fluid
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#')= title
+			#navbar.navbar-collapse.collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href='/') All stuff
+					li
+						a(href='/things/create') Create new stuff
+				form.navbar-form.navbar-right
+					input.form-control(type='text', placeholder='Search...')
+	.container-fluid
+		.row
+			.col-xs-12.main
+				h1.page-header= title
+					h2.sub-header= subTitle
+				.table-responsive
+					table#stuffTable.table.table-striped(data-api-url=getStuffApiUrl, data-image-storage-path=imageStoragePath)
+						thead
+							tr
+								th #
+								th Name
+								th Quantity
+								th Barcode
+								th Size
+								th Created
+								th Image
+						tbody
+
+	script(type="text/html" id="stuffTable-rowTemplate")
+		td(data-content="id")
+		td(data-content="name")
+		td(data-content="quantity")
+		td(data-content="barcode")
+		td(data-content="size")
+		td(data-content="created")
+		td
+			img.stuffTables__stuffImage(data-src="imagePath")

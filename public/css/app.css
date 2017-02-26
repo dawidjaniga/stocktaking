@@ -1,0 +1,16 @@
+.stuffTables__stuffImage {
+    height: 200px;
+}
+
+#stuffTable .rowTemplate {
+    display: none;
+}
+
+#notifyAlert {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 1050;
+    transform: translateX(-50%);
+}
